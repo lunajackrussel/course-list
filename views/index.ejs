@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Course list</title>
+</head>
+<body>
+    <p><h1>Course list</h1></p>
+    <p><a href="/create">Add Course</a></p>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Comment</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        <% courses.forEach(function (value) { %>
+        <tr>
+            <td><%= value.course %></td>
+            <td><%= value.comment %></td>
+            <td><a href="/edit/<%= value.id %>">Update</a></td>
+            <td><a href="/delete/<%= value.id %>">Delete</a></td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+</html>

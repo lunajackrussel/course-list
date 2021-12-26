@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>User Edit</title>
+</head>
+<body>
+    <h1>Update Form</h1>
+    <form action="/update/<%= course[0].id %>" method="POST">
+        Course <input type="text" name="course" value="<%= course[0].course %>"><br>
+        Comment <input type="text" name="comment" value="<%= course[0].comment %>"><br>
+        <button type="submit">Update</button>
+    </form>    
+</body>
+</html>
